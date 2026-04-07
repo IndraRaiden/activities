@@ -1,40 +1,41 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 
 export default function Seven() {
-  // Initialize scroll reveal animations
+  const { language } = useLanguage();
+  const t = translations[language].seven;
+
   useEffect(() => {
     const revealElements = document.querySelectorAll('.reveal');
-    
+
     function checkScroll() {
       revealElements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        
+
         if (elementTop < windowHeight * 0.8) {
           element.classList.add('active');
         }
       });
     }
-    
-    // Initial check
+
     checkScroll();
-    
-    // Add event listener
     window.addEventListener('scroll', checkScroll);
-    
-    // Cleanup
+
     return () => window.removeEventListener('scroll', checkScroll);
   }, []);
+
   return (
     <section id="contact" className="py-24 px-6 md:px-12 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-4xl font-bold mb-6 reveal animate-fade-in-left">GET IN TOUCH</h2>
-            <p className="text-lg mb-8 reveal animate-fade-in delay-100">Ready to embark on your luxury charter experience? Our charter specialists are standing by to assist you in planning your perfect journey.</p>
-            
+            <h2 className="text-4xl font-bold mb-6 reveal animate-fade-in-left">{t.heading}</h2>
+            <p className="text-lg mb-8 reveal animate-fade-in delay-100">{t.intro}</p>
+
             <div className="space-y-6">
               <div className="flex items-center gap-4 reveal animate-fade-in-left delay-300">
                 <div className="w-12 h-12 rounded-full bg-zinc-900 flex items-center justify-center flex-shrink-0">
@@ -43,11 +44,11 @@ export default function Seven() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Email Us</h3>
+                  <h3 className="font-semibold">{t.emailLabel}</h3>
                   <p className="text-gray-400">info@elitecharters.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 reveal animate-fade-in-left delay-300">
                 <div className="w-12 h-12 rounded-full bg-zinc-900 flex items-center justify-center flex-shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -55,11 +56,11 @@ export default function Seven() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Call Us</h3>
+                  <h3 className="font-semibold">{t.callLabel}</h3>
                   <p className="text-gray-400">+1 (800) 123-4567</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 reveal animate-fade-in-left delay-300">
                 <div className="w-12 h-12 rounded-full bg-zinc-900 flex items-center justify-center flex-shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -68,74 +69,74 @@ export default function Seven() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold">Visit Us</h3>
+                  <h3 className="font-semibold">{t.visitLabel}</h3>
                   <p className="text-gray-400">123 Harbor Drive, Marina Bay, FL 33019</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className="bg-zinc-900 p-8 rounded-lg reveal animate-fade-in delay-300">
-            <h3 className="text-2xl font-bold mb-6 reveal animate-fade-in delay-400">Request Information</h3>
+            <h3 className="text-2xl font-bold mb-6 reveal animate-fade-in delay-400">{t.formTitle}</h3>
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
+                  <label htmlFor="name" className="block text-sm font-medium mb-1">{t.name}</label>
+                  <input
+                    type="text"
+                    id="name"
                     className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
-                    placeholder="Your name"
+                    placeholder={t.namePlaceholder}
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
+                  <label htmlFor="email" className="block text-sm font-medium mb-1">{t.email}</label>
+                  <input
+                    type="email"
+                    id="email"
                     className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
-                    placeholder="Your email"
+                    placeholder={t.emailPlaceholder}
                   />
                 </div>
               </div>
-              
+
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-1">Phone</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
+                <label htmlFor="phone" className="block text-sm font-medium mb-1">{t.phone}</label>
+                <input
+                  type="tel"
+                  id="phone"
                   className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
-                  placeholder="Your phone number"
+                  placeholder={t.phonePlaceholder}
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="interest" className="block text-sm font-medium mb-1">I'm interested in</label>
-                <select 
-                  id="interest" 
+                <label htmlFor="interest" className="block text-sm font-medium mb-1">{t.interest}</label>
+                <select
+                  id="interest"
                   className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
                 >
-                  <option value="">Select an option</option>
-                  <option value="yacht">Yacht Charter</option>
-                  <option value="jet">Private Jet</option>
-                  <option value="helicopter">Helicopter</option>
-                  <option value="car">Luxury Car</option>
-                  <option value="package">Custom Package</option>
+                  <option value="">{t.selectOption}</option>
+                  <option value="yacht">{t.yachtOption}</option>
+                  <option value="jet">{t.jetOption}</option>
+                  <option value="helicopter">{t.helicopterOption}</option>
+                  <option value="car">{t.carOption}</option>
+                  <option value="package">{t.packageOption}</option>
                 </select>
               </div>
-              
+
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
-                <textarea 
-                  id="message" 
-                  rows={4} 
+                <label htmlFor="message" className="block text-sm font-medium mb-1">{t.message}</label>
+                <textarea
+                  id="message"
+                  rows={4}
                   className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
-                  placeholder="Tell us about your charter requirements"
+                  placeholder={t.messagePlaceholder}
                 ></textarea>
               </div>
-              
+
               <button type="submit" className="w-full px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition duration-300 reveal animate-fade-in delay-500 animate-attention">
-                Submit Request
+                {t.submit}
               </button>
             </form>
           </div>
