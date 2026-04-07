@@ -15,11 +15,11 @@ const Footer = () => {
 
       {/* Navigation Links */}
       <nav className="hidden md:flex space-x-8">
-        <Link href="/" className="hover:text-[#3A9AFF]">{t.home}</Link>
-        <Link href="/#services" className="hover:text-[#3A9AFF]">{t.services}</Link>
-        <Link href="/#fleet" className="hover:text-[#3A9AFF]">{t.fleet}</Link>
-        <Link href="/#destinations" className="hover:text-[#3A9AFF]">{t.destinations}</Link>
-        <Link href="/#about" className="hover:text-[#3A9AFF]">{t.about}</Link>
+        <Link href="/" className="text-[#3A9AFF] hover:text-white transition-colors duration-300">{t.home}</Link>
+        <Link href="/#services" className="text-[#3A9AFF] hover:text-white transition-colors duration-300">{t.services}</Link>
+        <Link href="/#fleet" className="text-[#3A9AFF] hover:text-white transition-colors duration-300">{t.fleet}</Link>
+        <Link href="/#destinations" className="text-[#3A9AFF] hover:text-white transition-colors duration-300">{t.destinations}</Link>
+        <Link href="/#about" className="text-[#3A9AFF] hover:text-white transition-colors duration-300">{t.about}</Link>
       </nav>
 
       {/* Contact Button */}

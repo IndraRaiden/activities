@@ -31,7 +31,7 @@ export default function One() {
   return (
     <section className="relative py-36 px-8 md:px-16 flex flex-col justify-center min-h-screen overflow-hidden">
       {/* Abstract design elements */}
-      <div className="absolute right-0 top-1/4 w-[30rem] h-[30rem] bg-gradient-to-r from-[#3A9AFF]/20 to-[#261CC1]/10 rounded-full blur-3xl opacity-70"></div>
+      <div className="absolute right-0 top-1/4 w-[35rem] h-[35rem] bg-gradient-to-r from-[#3A9AFF]/40 to-[#261CC1]/20 rounded-full blur-3xl opacity-80"></div>
       <div className="absolute -right-48 -bottom-48 w-[40rem] h-[40rem] bg-gradient-to-r from-[#FFF15E]/25 to-[#3A9AFF]/10 rounded-full blur-3xl opacity-70"></div>
       <div className="absolute left-1/4 -bottom-24 w-[25rem] h-[25rem] bg-gradient-to-r from-[#FFF15E]/15 to-[#261CC1]/10 rounded-full blur-3xl opacity-60"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#FFF15E]/8 to-transparent pointer-events-none"></div>
@@ -40,11 +40,11 @@ export default function One() {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMxMTExMTEiIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNNjAgMEgwdjYwaDYwVjB6TTU5IDFIMVY1OGg1OFYxeiIgZmlsbD0iIzIyMjIyMiIvPjwvZz48L3N2Zz4=')] opacity-[0.03] pointer-events-none"></div>
 
       {/* Refined animated elements */}
-      <div className="absolute top-1/4 right-1/4 w-8 h-8 border border-[#3A9AFF]/20 rounded-full animate-pulse"></div>
-      <div className="absolute top-1/3 left-1/4 w-12 h-12 border border-[#3A9AFF]/10 rounded-full animate-float opacity-40"></div>
-      <div className="absolute bottom-1/3 right-1/3 w-5 h-5 bg-[#3A9AFF]/10 rounded-full animate-ping opacity-70"></div>
-      <div className="absolute top-1/2 left-1/3 w-16 h-[1px] bg-[#3A9AFF]/20 rotate-45"></div>
-      <div className="absolute bottom-1/4 right-1/5 w-24 h-[1px] bg-[#3A9AFF]/20 -rotate-45"></div>
+      <div className="absolute top-1/4 right-1/4 w-8 h-8 border border-[#3A9AFF]/50 rounded-full animate-pulse"></div>
+      <div className="absolute top-1/3 left-1/4 w-12 h-12 border border-[#3A9AFF]/30 rounded-full animate-float opacity-60"></div>
+      <div className="absolute bottom-1/3 right-1/3 w-5 h-5 bg-[#3A9AFF]/30 rounded-full animate-ping opacity-80"></div>
+      <div className="absolute top-1/2 left-1/3 w-16 h-[1px] bg-[#3A9AFF]/40 rotate-45"></div>
+      <div className="absolute bottom-1/4 right-1/5 w-24 h-[1px] bg-[#3A9AFF]/40 -rotate-45"></div>
 
       <div className="absolute inset-0 bg-gradient-to-r from-[#1C0770] via-[#1C0770]/90 to-[#1C0770]/70 z-0"></div>
       <div className="relative z-10 max-w-4xl">
