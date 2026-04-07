@@ -197,7 +197,7 @@ export const translations = {
       heading4: 'PREMIUM',
       description:
         'Descubre el viaje de tus sueños con nuestra flota exclusiva. Desde lujosos yates hasta jets privados, ofrecemos experiencias charter de élite meticulosamente adaptadas a tus deseos y especificaciones.',
-      bookBtn: 'Reserva tu Charter',
+      bookBtn: 'Alquila tu Charter',
       fleetBtn: 'Ver Nuestra Flota',
       vessels: 'Embarcaciones',
       destinationsStat: 'Destinos',

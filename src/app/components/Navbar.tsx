@@ -33,30 +33,30 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 py-5 px-8 md:px-16 flex justify-between items-center z-50 transition-all duration-500 ${scrolled ? 'bg-black bg-opacity-85 backdrop-blur-sm border-b border-gray-800' : 'bg-transparent'}`}>
-        <div className="font-light tracking-widest text-2xl">ELITE <span className="font-bold italic">CHARTERS</span></div>
+      <header className={`fixed top-0 left-0 right-0 py-5 px-8 md:px-16 flex justify-between items-center z-50 transition-all duration-500 ${scrolled ? 'bg-[#1C0770] bg-opacity-90 backdrop-blur-sm border-b border-[#261CC1]' : 'bg-transparent'}`}>
+        <div className="font-light tracking-widest text-2xl">ELITE <span className="font-bold italic text-[#FFF15E]">CHARTERS</span></div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-10">
-          <Link href="/" className="text-sm uppercase tracking-widest hover:text-gray-300 relative group">
+          <Link href="/" className="text-sm uppercase tracking-widest hover:text-[#3A9AFF] relative group">
             {t.home}
-            <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#FFF15E] transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/#services" className="text-sm uppercase tracking-widest hover:text-gray-300 relative group">
+          <Link href="/#services" className="text-sm uppercase tracking-widest hover:text-[#3A9AFF] relative group">
             {t.services}
-            <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#FFF15E] transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/#fleet" className="text-sm uppercase tracking-widest hover:text-gray-300 relative group">
+          <Link href="/#fleet" className="text-sm uppercase tracking-widest hover:text-[#3A9AFF] relative group">
             {t.fleet}
-            <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#FFF15E] transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/#destinations" className="text-sm uppercase tracking-widest hover:text-gray-300 relative group">
+          <Link href="/#destinations" className="text-sm uppercase tracking-widest hover:text-[#3A9AFF] relative group">
             {t.destinations}
-            <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#FFF15E] transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/#about" className="text-sm uppercase tracking-widest hover:text-gray-300 relative group">
+          <Link href="/#about" className="text-sm uppercase tracking-widest hover:text-[#3A9AFF] relative group">
             {t.about}
-            <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#FFF15E] transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </nav>
 
@@ -65,19 +65,19 @@ const Navbar = () => {
           {/* Language Toggle */}
           <button
             onClick={toggleLanguage}
-            className="px-3 py-1.5 border border-white/30 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 hover:border-white"
+            className="px-3 py-1.5 border border-[#FFF15E]/30 text-xs uppercase tracking-widest hover:bg-[#FFF15E] hover:text-[#1C0770] transition-all duration-300 hover:border-[#FFF15E]"
             aria-label="Toggle language"
           >
             {language === 'en' ? 'ES' : 'EN'}
           </button>
-          <button className="px-6 py-2 border border-white/50 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 hover:border-white">
+          <button className="px-6 py-2 border border-[#FFF15E]/50 text-sm uppercase tracking-widest hover:bg-[#FFF15E] hover:text-[#1C0770] transition-all duration-300 hover:border-[#FFF15E]">
             {t.contact}
           </button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 border border-white/30 rounded-sm"
+          className="md:hidden p-2 border border-[#FFF15E]/30 rounded-sm"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
@@ -95,36 +95,36 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black/95 backdrop-blur-md z-40 animate-fade-in">
+        <div className="md:hidden fixed inset-0 bg-[#1C0770]/95 backdrop-blur-md z-40 animate-fade-in">
           <div className="flex flex-col items-center justify-center h-full space-y-8">
-            <Link href="/" className="text-lg uppercase tracking-widest hover:text-gray-300 relative group" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/" className="text-lg uppercase tracking-widest hover:text-[#3A9AFF] relative group" onClick={() => setMobileMenuOpen(false)}>
               {t.home}
-              <span className="absolute -bottom-1 left-1/4 w-1/2 h-px bg-white/30"></span>
+              <span className="absolute -bottom-1 left-1/4 w-1/2 h-px bg-[#FFF15E]/30"></span>
             </Link>
-            <Link href="/#services" className="text-lg uppercase tracking-widest hover:text-gray-300 relative group" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/#services" className="text-lg uppercase tracking-widest hover:text-[#3A9AFF] relative group" onClick={() => setMobileMenuOpen(false)}>
               {t.services}
-              <span className="absolute -bottom-1 left-1/4 w-1/2 h-px bg-white/30"></span>
+              <span className="absolute -bottom-1 left-1/4 w-1/2 h-px bg-[#FFF15E]/30"></span>
             </Link>
-            <Link href="/#fleet" className="text-lg uppercase tracking-widest hover:text-gray-300 relative group" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/#fleet" className="text-lg uppercase tracking-widest hover:text-[#3A9AFF] relative group" onClick={() => setMobileMenuOpen(false)}>
               {t.fleet}
-              <span className="absolute -bottom-1 left-1/4 w-1/2 h-px bg-white/30"></span>
+              <span className="absolute -bottom-1 left-1/4 w-1/2 h-px bg-[#FFF15E]/30"></span>
             </Link>
-            <Link href="/#destinations" className="text-lg uppercase tracking-widest hover:text-gray-300 relative group" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/#destinations" className="text-lg uppercase tracking-widest hover:text-[#3A9AFF] relative group" onClick={() => setMobileMenuOpen(false)}>
               {t.destinations}
-              <span className="absolute -bottom-1 left-1/4 w-1/2 h-px bg-white/30"></span>
+              <span className="absolute -bottom-1 left-1/4 w-1/2 h-px bg-[#FFF15E]/30"></span>
             </Link>
-            <Link href="/#about" className="text-lg uppercase tracking-widest hover:text-gray-300 relative group" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/#about" className="text-lg uppercase tracking-widest hover:text-[#3A9AFF] relative group" onClick={() => setMobileMenuOpen(false)}>
               {t.about}
-              <span className="absolute -bottom-1 left-1/4 w-1/2 h-px bg-white/30"></span>
+              <span className="absolute -bottom-1 left-1/4 w-1/2 h-px bg-[#FFF15E]/30"></span>
             </Link>
             {/* Language Toggle (mobile) */}
             <button
               onClick={toggleLanguage}
-              className="px-4 py-2 border border-white/30 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+              className="px-4 py-2 border border-[#FFF15E]/30 text-sm uppercase tracking-widest hover:bg-[#FFF15E] hover:text-[#1C0770] transition-all duration-300"
             >
               {language === 'en' ? 'Español' : 'English'}
             </button>
-            <Link href="/#contact" className="mt-4 px-8 py-2 border border-white/50 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/#contact" className="mt-4 px-8 py-2 border border-[#FFF15E]/50 text-sm uppercase tracking-widest hover:bg-[#FFF15E] hover:text-[#1C0770] transition-all duration-300" onClick={() => setMobileMenuOpen(false)}>
               {t.contact}
             </Link>
           </div>
