@@ -29,13 +29,13 @@ export default function Three() {
   }, []);
 
   return (
-    <section id="fleet" className="py-32 px-8 md:px-16 bg-[#1C0770] relative overflow-hidden">
-      {/* Subtle grid overlay */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMxMTExMTEiIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNNjAgMEgwdjYwaDYwVjB6TTU5IDFIMVY1OGg1OFYxeiIgZmlsbD0iIzIyMjIyMiIvPjwvZz48L3N2Zz4=')] opacity-[0.03] pointer-events-none"></div>
+    <section id="fleet" className="py-32 px-8 md:px-16 bg-[#261CC1] relative overflow-hidden">
+      {/* Subtle yellow tint wash */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#FFF15E]/[0.06] via-transparent to-[#FFF15E]/[0.04] pointer-events-none"></div>
 
       {/* Decorative elements */}
-      <div className="absolute right-0 top-1/4 w-[25rem] h-[25rem] bg-gradient-to-r from-[#3A9AFF]/10 to-[#261CC1]/5 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute left-0 bottom-0 w-[25rem] h-[25rem] bg-gradient-to-r from-[#FFF15E]/20 to-[#3A9AFF]/5 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute right-0 top-1/4 w-[25rem] h-[25rem] bg-gradient-to-r from-[#3A9AFF]/15 to-[#FFF15E]/5 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute left-0 bottom-0 w-[30rem] h-[30rem] bg-gradient-to-r from-[#FFF15E]/20 to-[#3A9AFF]/5 rounded-full blur-3xl opacity-50"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-16 reveal animate-fade-in-left">

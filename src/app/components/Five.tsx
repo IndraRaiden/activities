@@ -29,10 +29,11 @@ export default function Five() {
   }, []);
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-[#261CC1] text-center relative overflow-hidden">
-      {/* Sandy glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#FFF15E]/5 via-transparent to-[#FFF15E]/10 pointer-events-none"></div>
-      <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-[40rem] h-[15rem] bg-[#FFF15E]/15 rounded-full blur-3xl pointer-events-none"></div>
+    <section className="py-24 px-6 md:px-12 bg-[#3A9AFF] text-center relative overflow-hidden">
+      {/* Yellow sandy wash */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#FFF15E]/10 via-transparent to-[#FFF15E]/15 pointer-events-none"></div>
+      <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-[50rem] h-[18rem] bg-[#FFF15E]/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[20rem] h-[20rem] bg-[#FFF15E]/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="max-w-4xl mx-auto relative z-10">
         <h2 className="text-4xl font-bold mb-6 reveal animate-scale-in text-[#FFF15E]">
           {t.heading1}<br />
